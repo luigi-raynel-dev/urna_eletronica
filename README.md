@@ -6,19 +6,19 @@
 
 ### `IMAGENS DO PROJETO`📷
 >Vote no seu Vereador  :memo:
-![alt](images/template_1.jpeg)
+![alt](img/template_1.jpeg)
 ***
 ----
 >Vote no seu Prefeito  :memo:
-![alt](images/template_2.jpeg)
+![alt](img/template_2.jpeg)
 ***
 ----
 >Vote em Nulo  :memo:
-![alt](images/template_3.jpeg)
+![alt](img/template_3.jpeg)
 ***
 ----
 >Vote em Branco  :memo:
-![alt](images/template_4.jpeg)
+![alt](img/template_4.jpeg)
 ***
 
 
