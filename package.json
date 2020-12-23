@@ -1,0 +1,23 @@
+{
+  "name": "urna_eletronica",
+  "version": "1.0.0",
+  "description": "Portifólio de Urna Eletrônica para as eleições de 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luigi-raynel-dev/urna_eletronica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luigi-raynel-dev/urna_eletronica/issues"
+  },
+  "homepage": "https://github.com/luigi-raynel-dev/urna_eletronica#readme",
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
