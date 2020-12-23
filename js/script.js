@@ -59,6 +59,8 @@ function atualizaTela() {
         for(let i = 0; i < candidato.fotos.length; i++) {
             if(i === 0) {
                 fotosHTML += `<div class="image"><img src="${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`;
+            }else{
+                fotosHTML += `<div class="image small"><img src="${candidato.fotos[i].url}" alt="">${candidato.fotos[i].legenda}</div>`;
             }
         }
         fotos.innerHTML = fotosHTML;
@@ -88,15 +90,49 @@ function clicou(n) {
 }
 
 function branco() {
-    alert("Clicou em Branco")
+    numero = ''
+    votoBranco = true;
+    votoInfo.style.display = 'block';
+    aviso.style.display = 'block';
+    num.innerHTML = '';
+    fotos.innerHTML = '';
+    descricao.innerHTML = '<div class="aviso-grande pisca">VOTO EM BRANCO</div>';
 }
 
 function corrige() {
-    alert("Clicou em corrige")
+    comecaEtapa();
 }
 
 function confirma() {
-    alert("Clicou em confirma")
+     
+    let etapa = etapas[etapaAtual];
+
+    let votoConfirmado = false;
+
+    if(votoBranco === true){
+        votoConfirmado = true;
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: 'Branco'
+        })
+    }else if(numero.length === etapa.numeros){
+        votoConfirmado = true;
+        votos.push({
+            etapa: etapas[etapaAtual].titulo,
+            voto: numero
+        })
+    }
+
+    if(votoConfirmado){
+        etapaAtual++;
+        if(etapas[etapaAtual] != undefined){
+            comecaEtapa();
+        }else{
+            document.querySelector(".tela").innerHTML = '<div class="aviso-gigante pisca">FIM</div>';
+            console.log(votos);
+        }
+    }
+
 }
 
 comecaEtapa();
